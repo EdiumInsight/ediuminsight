@@ -1,2 +1,2 @@
-import { ModuleView } from "@/components/module-view";
-export default function AlertsPage() { return <ModuleView module="alerts" />; }
+import { PersonalDataModule } from "@/components/personal-data-module";
+export default function AlertsPage() { return <PersonalDataModule module="alerts" />; }

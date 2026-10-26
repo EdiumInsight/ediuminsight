@@ -1,2 +1,2 @@
-import { ModuleView } from "@/components/module-view";
-export default function WatchlistsPage() { return <ModuleView module="watchlists" />; }
+import { PersonalDataModule } from "@/components/personal-data-module";
+export default function WatchlistsPage() { return <PersonalDataModule module="watchlists" />; }

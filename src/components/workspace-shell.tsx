@@ -52,8 +52,8 @@ export function WorkspaceShell({ children }: { children: React.ReactNode }) {
           </Link>
         </nav>
         <details className="profile-menu">
-          <summary className="sidebar-foot"><span className="avatar">JD</span><span className="sidebar-foot-copy"><span className="profile-name">Jordan Davis</span><span className="profile-plan">Individual investor</span></span><ChevronDown className="profile-chevron" size={14} /></summary>
-          <div className="profile-popover"><div className="profile-popover-head"><strong>Jordan Davis</strong><span>jordan@example.com</span></div><Link href="/settings"><Settings2 size={14} />Profile &amp; preferences</Link><div className="profile-environment"><span className="status-dot demo-dot" />Demo workspace</div></div>
+          <summary className="sidebar-foot"><span className="avatar">EI</span><span className="sidebar-foot-copy"><span className="profile-name">Research workspace</span><span className="profile-plan">Public sources</span></span><ChevronDown className="profile-chevron" size={14} /></summary>
+          <div className="profile-popover"><div className="profile-popover-head"><strong>Research workspace</strong><span>Public market data · private data not connected</span></div><Link href="/settings"><Settings2 size={14} />Data connections</Link><div className="profile-environment"><span className="status-dot demo-dot" />Account not configured</div></div>
         </details>
       </aside>
       <div className={`main-column${collapsed ? " collapsed" : ""}`}>
@@ -63,7 +63,7 @@ export function WorkspaceShell({ children }: { children: React.ReactNode }) {
             <button className="icon-button desktop-collapse" aria-label={collapsed ? "Zijbalk uitklappen" : "Zijbalk inklappen"} onClick={() => setCollapsed(!collapsed)}><ChevronLeft size={16} style={{ transform: collapsed ? "rotate(180deg)" : undefined }} /></button>
             <label className="search-box"><Search size={14} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search ticker, company, or metric..." aria-label="Zoek bedrijven en tickers" /><kbd style={{ color: "#718096", font: "9px var(--font-mono)" }}>⌘ K</kbd></label>
           </div>
-          <div className="topbar-actions"><details className="data-menu"><summary className="market-status"><span className="status-dot demo-dot" />DEMO DATA<ChevronDown size={12} /></summary><div className="dropdown-menu"><span className="dropdown-kicker">DATA CONNECTION</span><strong>Illustrative sample data</strong><p>Market prices and fundamentals are not live.</p><Link href="/settings">Configure providers <span>→</span></Link></div></details><Link className="icon-button notification-button" href="/alerts" aria-label="Open meldingen"><Bell size={16} /><span className="notification-dot" /></Link></div>
+          <div className="topbar-actions"><details className="data-menu"><summary className="market-status"><span className="status-dot" />PUBLIC SOURCES<ChevronDown size={12} /></summary><div className="dropdown-menu"><span className="dropdown-kicker">CONNECTED SOURCES</span><strong>Nasdaq · SEC EDGAR · RSS</strong><p>Quotes, filed financials, and attributed headlines. Account data requires Supabase.</p><Link href="/settings">View connections <span>→</span></Link></div></details><Link className="icon-button notification-button" href="/alerts" aria-label="Open meldingen"><Bell size={16} /></Link></div>
         </header>
         <AnimatePresence mode="wait" initial={false}>
           <motion.div key={pathname} initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: .18 }}>
